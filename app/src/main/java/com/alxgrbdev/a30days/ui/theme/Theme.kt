@@ -2,6 +2,7 @@
 
 package com.alxgrbdev.a30days.ui.theme
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Build
 import android.view.View
@@ -83,6 +84,7 @@ private val DarkColors = darkColorScheme(
     scrim = md_theme_dark_scrim,
 )
 
+@SuppressLint("ComposableNaming")
 @Composable
 fun _30DaysTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
