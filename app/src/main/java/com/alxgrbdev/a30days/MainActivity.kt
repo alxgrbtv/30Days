@@ -30,6 +30,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 @SuppressLint("ComposableNaming")
 @Composable
 fun _30DaysApp() {
