@@ -51,11 +51,11 @@ fun TipCard(
         ) {
             Text(
                 text = "Day " + stringResource(id = tip.day),
-                style = MaterialTheme.typography.bodyLarge
+                style = MaterialTheme.typography.titleMedium
             )
             Text(
                 text = stringResource(id = tip.title),
-                style = MaterialTheme.typography.bodyLarge
+                style = MaterialTheme.typography.displaySmall
             )
             Image(
                 painter = painterResource(id = R.drawable.ph_500_400),
