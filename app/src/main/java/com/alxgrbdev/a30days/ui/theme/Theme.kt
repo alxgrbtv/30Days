@@ -105,7 +105,7 @@ fun _30DaysTheme(
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
-            setUpEdge(view, darkTheme)
+            setUpEdgeToEdge(view, darkTheme)
         }
     }
 
@@ -132,14 +132,6 @@ private fun setUpEdgeToEdge(view: View, darkTheme: Boolean) {
         else -> Color(0x00, 0x00, 0x00, 0x50).toArgb()
     }
     window.navigationBarColor = navigationBarColor
-    val controller = WindowCompat.getInsetsController(window, view)
-    controller.isAppearanceLightStatusBars = !darkTheme
-    controller.isAppearanceLightNavigationBars = !darkTheme
-}
-
-private fun setUpEdge(view: View, darkTheme: Boolean) {
-    val window = (view.context as Activity).window
-    WindowCompat.setDecorFitsSystemWindows(window, true)
     val controller = WindowCompat.getInsetsController(window, view)
     controller.isAppearanceLightStatusBars = !darkTheme
     controller.isAppearanceLightNavigationBars = !darkTheme
